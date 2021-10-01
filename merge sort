@@ -1,0 +1,46 @@
+#merge sort algorithm in cpp
+//first divide the array in sorted arrays. then we have to merge 2 sorted arrays agin and again unless we get one combined isrted array
+
+void merge(int arr[],int n, int l, int r, int mid){
+  int id =0;
+  int arr_l[],arr_r[];
+  for(int i=l;i<mid;i++){
+    arr_l[id] = arr[i]
+   }
+   id =0;
+   for(int i=mid;i<r;i++){
+    arr_r[id] = arr[i]
+   }
+   for(int i=0;i<n;i++){
+      if(arr[j]<arr[k]){
+        arr[i] = arr[j];  
+        j++;
+      }
+      if(arr[j]>arr[k]){
+        arr[i] = arr[k];
+        k++;
+      }
+      else{
+        arr[i] = arr[j];
+        arr[++i] = arr[k];
+        j++;
+        k++;
+      }
+   }
+   
+}
+
+void mergeSort(int arr[], int n, int l, int r){
+  int mid = l +(r-l)/2;
+  while(l<=r){
+    mergeSort(arr,n,l,mid-1);
+    mergeSort(arr,n,mid,r);
+    merge(arr,n,l,r,mid);
+  }
+}
+int main(){
+int arr = {5,6,2,3,9,8};
+mergeSort(arr,n,,0 , n-1);
+
+
+}
