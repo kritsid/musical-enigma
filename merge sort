@@ -4,14 +4,16 @@
 void merge(int arr[],int n, int l, int r, int mid){
   int id =0;
   int arr_l[],arr_r[];
-  for(int i=l;i<mid;i++){
+  int left_len = mid - l;
+  int right_len = r-mid;
+  for(int i=l;i<left_len;i++){
     arr_l[id] = arr[i]
    }
    id =0;
-   for(int i=mid;i<r;i++){
+   for(int i=mid;i<right_len;i++){
     arr_r[id] = arr[i]
    }
-   for(int i=0;i<n;i++){
+   while(j<left_len && k<right_len){
       if(arr[j]<arr[k]){
         arr[i] = arr[j];  
         j++;
@@ -26,13 +28,14 @@ void merge(int arr[],int n, int l, int r, int mid){
         j++;
         k++;
       }
+      i++;
    }
    
 }
 
 void mergeSort(int arr[], int n, int l, int r){
   int mid = l +(r-l)/2;
-  while(l<=r){
+  if(l<=r){
     mergeSort(arr,n,l,mid-1);
     mergeSort(arr,n,mid,r);
     merge(arr,n,l,r,mid);
