@@ -1,0 +1,35 @@
+Sorting algorithms:
+Heap Sort:
+	Priority Queues->age wise sorting
+	Complexity: log(n) insertion, deletion O(1)->search
+Merge Sort
+	Recursive relation: T(n) = 2*T(n/2) + n
+	Complexity: nlog(n) in all cases, o(n) extra space
+Count Sort
+	Complexity: time: o(n), space = o(n) + o(max_num)
+Quick Sort
+Complexity: Average case + Best Case = nlog(n)
+		       Worst Case= O(n*n)
+Radix Sort:
+	Complexity: digits*n
+Bubble Sort
+	Recursive Relation: T(n) = T(n-1) +n
+	Complexity:O(n*n)
+Insertion Sort
+	Recursive Relation: T(n) = T(n-1) +n
+	Complexity:O(n*n)
+Shell Sort
+	Complexity:O(n*n)
+
+
+
+
+Searching Algo:
+Binary Search
+	Complexity: log(n)
+
+Linear Search
+	Complexity: O(n)
+
+Complexity Order:
+o(logn)<o(n)<o(nlogn)<o(n*n)<exponential< factorial
