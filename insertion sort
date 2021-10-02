@@ -1,0 +1,33 @@
+#include<iostream>
+using namepsace std;
+void insertion(int arr[], int n){
+//first elemnet i laready sorted;
+pick 2nd element and sort 1st and 2nd element
+repeat the same process(adding one elemnt every time to a sorted array)
+  for(int i=1;i<n;i++){
+  temp  = arr[i];
+    for(int j=i-1;j>=0;j--){
+      if(temp<arr[j]){
+        arr[j+1] = arr[j]
+        j--;
+      }
+      else{
+        arr[j+1] = temp;
+        break;
+      }
+    }
+
+  }
+}
+
+int main(){
+int arr[] = {1,20,13,4};
+int n;
+insertion(arr,n);
+return 0;
+}
+/**
+1 20 13 4
+1 13 20 4
+1 4 13 20
+**/
