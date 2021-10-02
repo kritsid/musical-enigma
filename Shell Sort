@@ -1,0 +1,26 @@
+
+shell_sort(int arr[] int n){
+//we have t make a gap seq.. compare and swap elements at index = i, gap
+//keep on decrementing gap till it becomes 1
+// shell sort at gap 1 == insertion sort
+//start with a big gap, lets say the mid
+
+for(int gap = n/2;gap>0;gap/2){
+  //maitntain 2 pointers, one at current id, other at current id + gap
+  for(int i= gap;i<n;i++){
+    int j ;
+    int temp = arr[i]
+    for(j = i;j>=gap && arr[j-gap]>temp;j = j-gap){
+      arr[j] = arr[j-gap];    
+    }
+    arr[j] = temp;
+  }
+
+}
+
+
+}
+int main(){
+
+shell_sort(arr,n)
+}
