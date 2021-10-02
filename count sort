@@ -1,0 +1,30 @@
+Count Sort:
+
+
+Void count_sort(){
+//find max_value from array;
+   for(int i=0;i,n;i++){
+large = max(large, arr[i]);
+    }
+    Int count_arr[large]={};
+    for(int i=0i<n;i++){
+	count_arr[arr[i]]++;
+    }
+    for(int i=0;i<large-1;i++){
+	Count_arr[i+1] += count_arr[i];
+	
+    }
+for(int i=n-1;i>=0;i--){
+	Output[--count[arr[i]]] = arr[i];
+}
+    
+
+
+Return ;
+}
+
+Int main(){
+
+Int arr[] = {};
+Int n;
+count_sort(arr,n);
