@@ -1,0 +1,43 @@
+
+Radix sort
+1)calculate max digits in a number in input array
+2) max_digits = no. of times count_sort will be applied
+
+
+398: 8 9 3
+count_sort(arr,n,place){
+	Count[10];
+Output[n];
+for(int i=0;i<n;i++){
+	count[(arr[i]/place)%10]++;
+}
+for(int i=0;i<9;i++){
+	Count[i+1] += count[i];
+}
+for(int i=0;i<n;i++){
+
+	output[--count[(arr[i]/place])%10]= arr[i];
+}
+//copy output to arr;
+
+}
+
+radix(int arr[], int n){
+Int Max_digits_val, val;
+for(int i=0;i<n;i++){
+Max_digits_val = max(max_digits_val,arr[i]);
+
+}
+for(int i=1;max_digits_val/i>0;i*10){
+count_sort(arr,n,i);
+}
+	
+
+}
+Int main(){
+Int arr[] ;
+Int n;
+cin>>n;
+radix(arr,n);
+Return 0;
+} 
